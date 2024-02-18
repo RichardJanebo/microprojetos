@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+    margin:0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: #012340;
+    display: flex;
+}
+a{
+    display: block;
+    background-color: #D1EAFF;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: black;
+    font-weight: bolder;
+    margin-top: 100px;
+}
+a:hover{
+    background-color: #4a535b;
+}
