@@ -13,9 +13,9 @@ calcular.addEventListener("click",()=>{
     }
     
     else{
-        const calculo = peso / altura.value**2
+        const calculo = peso.value / altura.value**2
+
         let cal = parseFloat(calculo.toFixed(2))
-        resposta.innerHTML=cal
 
 
         if(cal < 18.5){
