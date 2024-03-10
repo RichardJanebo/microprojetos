@@ -21,7 +21,7 @@ calcular.addEventListener("click",()=>{
         if(cal < 18.5){
             resposta.innerHTML=`Seu IMC é ${cal} e Você esta abaixo do peso`
         }else if(cal > 18.5 && cal < 24.9){
-            resposta.innerHTML=`Seu IMC é ${cal} e Você esta com o peso nomal`
+            resposta.innerHTML=`Seu IMC é ${cal} e Você esta com o peso normal`
         }else if(cal > 25 && cal < 29.9){
             resposta.innerHTML=`Seu IMC é ${cal} e Você esta com sobrepeso`
         }else if(cal > 30.0 && cal < 34.9){
