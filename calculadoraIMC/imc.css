@@ -29,6 +29,7 @@ main{
     border-radius: 0.5rem;
     gap: 1rem;
     box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.586);
+    flex-wrap: wrap;
 }
 input, button{
     padding: 5px;
@@ -41,4 +42,19 @@ button{
 }
 button:hover{
     box-shadow:3px 3px 2px rgba(0, 0, 0, 0.586) ;
+}
+img{
+    width: 300px;
+ 
+    margin: auto;
+    
+    
+    display: none;
+}
+@media (min-width:300px ) and (max-width:768px){
+    img{
+        width: 100px;
+        
+    }
+
 }
