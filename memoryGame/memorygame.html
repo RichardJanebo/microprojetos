@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="./css/login.css">
 </head>
 <body>
-    <form class="login_form">
+    <form class="login_form" id="login_form">
         <div class="login_header">
             <img src="images/esfera.png" alt="Esfera">
             <h1>Memory game</h1>
         </div>
-        <input type="text" placeholder="name" class="text_input">
-        <button type="submit" class="login_button" disabled>Play</button>
+        <input type="text" placeholder="name" class="text_input" id="tex_input">
+        <button type="submit" class="login_button" id="btn_login" disabled> Play</button>
 
         
 
@@ -23,5 +23,6 @@
     
 
 </body>
-<script src="memoryGame.js"></script>
+<script src="js/memoryGame.js"></script>
+<script src="js/loginMemorygame.js"></script>
 </html>
