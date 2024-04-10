@@ -8,7 +8,7 @@
 
 }
 .card{
-   aspect-ratio: 3/4;
+   aspect-ratio: 3/4.2;
    width: 100%;
    background-color:#334 ;
    border-radius: 5px;
@@ -21,17 +21,18 @@
     width: 100%;
     height: 100%;
     position: absolute;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
 }
 .front{
-    background-image: url("../images/card-Goku\ \(1\).png");
-    background-size: contain;
-    background-position: center;
+    transform: rotateY(180deg);
+    
     
 }
 .back{
     background-image: url("../images/Rectangle\ 2.png");
-    background-size: contain;
-    background-position: center;
+    
     backface-visibility: hidden;
 }
 
