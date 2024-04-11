@@ -10,6 +10,8 @@ const personagens = [
     "card-Trunks",
     "card-Vegeta"
 ]
+
+
 const ale = Math.random() - 0.5
 
 personagens.sort(()=> ale)

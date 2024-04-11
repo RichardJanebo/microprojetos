@@ -16,6 +16,7 @@
    transition: all 400ms ease;
    transform-style:preserve-3d ;
    background-repeat: no-repeat;
+   
 }
 .face{
     width: 100%;
@@ -24,6 +25,8 @@
     background-size: cover;
     background-position: center;
     border-radius: 5px;
+    
+    
 }
 .front{
     transform: rotateY(180deg);
@@ -36,6 +39,8 @@
     backface-visibility: hidden;
 }
 
-.card:hover{
+
+
+.reviwCard{
     transform: rotateY(180deg);
 }

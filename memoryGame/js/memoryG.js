@@ -21,6 +21,32 @@ const createElement = (tag,className)=>{
 
 }
 
+let firstCard = ""
+let secondCard = ""
+
+const checkCards = () =>{
+    if(firstCard === secondCard){
+        alert("Acertou")
+    }
+}
+
+const revealCard = ({target})=>{
+    if(target.parentNode.className.includes("reviwCard")){
+        return
+    }
+
+    if(firstCard == ""){
+        target.parentNode.classList.add("reviwCard")
+        firstCard = target.parentNode
+    }else if(secondCard == ""){
+        target.parentNode.classList.add("reviwCard")
+        secondCard = target.parentNode
+
+        checkCards()
+        
+    }
+    
+}
 
 const createCard = (personagem)=>{
     const card = createElement("div","card")
@@ -33,14 +59,24 @@ const createCard = (personagem)=>{
     card.appendChild(front)
     card.appendChild(back)
 
+    card.addEventListener("click",revealCard)
+    card.setAttribute("data-caracter",personagem)
+
    return card
 }
+
+
+
+
+
+
+
 
 const loadGame = ()=>{
     const duplicateArrey = [...personagens,...personagens]
 
     const embaralharArrey = duplicateArrey.sort(()=>
-        Math.random() - 0.5
+        Math.random() -0.5
     )
 
 
@@ -52,4 +88,8 @@ const loadGame = ()=>{
     })
 }
 
+
+
 loadGame()
+
+
