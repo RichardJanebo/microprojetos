@@ -1,4 +1,6 @@
 const grid = document.getElementById("grid")
+const player = document.querySelector("#player")
+player.innerHTML=localStorage.getItem("player")
 
 const personagens = [
     "card-Boo",
@@ -21,13 +23,43 @@ const createElement = (tag,className)=>{
 
 }
 
+let pontos = 0
+
 let firstCard = ""
 let secondCard = ""
 
-const checkCards = () =>{
-    if(firstCard === secondCard){
-        alert("Acertou")
+
+const checkEndgame = ()=>{
+    
+    const desabilit = [...document.querySelectorAll(".disabledCard")]
+    if(desabilit.length == 20){
+        alert("Parabens você ganhou o jogo")
     }
+
+}
+
+const checkCards = () =>{
+    setTimeout(()=>{
+        if(firstCard.dataset.caracter == secondCard.dataset.caracter){
+            pontos++
+            
+            firstCard.firstChild.classList.add("disabledCard")
+            secondCard.firstChild.classList.add("disabledCard")
+
+            
+            firstCard = ""
+            secondCard = ""
+
+
+            checkEndgame()
+            
+        }else{
+            firstCard.classList.remove("reviwCard")
+            secondCard.classList.remove("reviwCard")
+            firstCard = ""
+            secondCard = ""
+        }
+    },1000)
 }
 
 const revealCard = ({target})=>{
