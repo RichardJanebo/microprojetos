@@ -82,7 +82,7 @@ let secondCard = ""
 const checkEndgame = () => {
 
     const desabilit = [...document.querySelectorAll(".disabledCard")]
-    if (desabilit.length == 2) {
+    if (desabilit.length == 20) {
         const div = document.createElement("div")
         const buton = document.createElement("button")
         buton.setAttribute("class", "botton_end")
