@@ -10,6 +10,9 @@ main{
     align-items: center;
     justify-content: center;
     padding: 20px 20px 50px;
+    position: relative;
+    padding: 1rem;
+    
 }
 
 header{
@@ -18,12 +21,22 @@ header{
     padding: 1rem;
     color: #E68E38;
     margin: auto ;
-    margin-bottom: 0.5rem;
+    
     width: 100%;
     max-width: 500px;
     border-radius: 5px;
     justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    
 }
+
+
+.material-symbols-outlined{
+    cursor: pointer;
+}
+
 
 
 
@@ -34,8 +47,8 @@ header{
     width: 100%;
     max-width: 500px;
     margin: 0px auto;
-    height: 80vh;
-
+    height: 100vh;
+    transition: 0.5s;
 }
 .card{
    
@@ -47,12 +60,7 @@ header{
    transition: all 400ms ease;
    transform-style:preserve-3d ;
    background-repeat: no-repeat;
-   
    cursor: pointer;
-
-   
-   
-
    
 }
 .face{
@@ -85,3 +93,61 @@ header{
     filter: grayscale(100);
 
 }
+.divEndgame{
+    width: 100%;
+    max-width: 500px;
+    background-color: #E68E38;
+    padding: 1rem;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color:#3c1a07;
+    justify-content: space-around;
+    text-align: center;
+    border: 3px solid #412b15;
+    line-height: 20pt;
+   
+    
+}
+.botton_end{
+    margin: 1rem auto;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block
+}
+.botton_end:hover{
+    box-shadow: 2px 1px 1px rgba(9, 9, 9, 0.607);
+}
+
+@media  screen and (max-width:500px) {
+    main{
+
+       padding:0px 16px;
+    }
+    .grid{
+        transition: 0.5s;
+        height: 90vh;
+        grid-template-columns: repeat(4,1fr);
+    }
+   
+    header{
+        margin-top: 1rem;
+        display: flex;
+        gap: 1rem;
+        justify-content: space-between;
+    }
+    .divEndgame{
+        width: 90%;
+    }
+    .botton_end{
+        padding: 1rem;
+        font-weight: bolder;
+        font-size: medium;
+    }
+    
+}
+

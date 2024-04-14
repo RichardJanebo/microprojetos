@@ -3,7 +3,7 @@ const btnLogin = document.querySelector("#btn_login")
 const form = document.querySelector("#login_form")
 
 const validateInput = ({target})=>{
-    if (target.value.length > 3){
+    if (target.value.length > 3 && target.value.length < 20){
         btnLogin.removeAttribute("disabled")
     }else{
         btnLogin.setAttribute("disabled","disabled")
