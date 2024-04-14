@@ -12,6 +12,18 @@ main{
     padding: 20px 20px 50px;
 }
 
+header{
+    display: flex;
+    background-color:#5D280B;
+    padding: 1rem;
+    color: #E68E38;
+    margin: auto ;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 5px;
+    justify-content: space-between;
+}
 
 
 
@@ -35,7 +47,7 @@ main{
    transition: all 400ms ease;
    transform-style:preserve-3d ;
    background-repeat: no-repeat;
-   width: 100px;
+   
    cursor: pointer;
 
    

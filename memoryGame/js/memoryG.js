@@ -1,6 +1,9 @@
 const grid = document.getElementById("grid")
 const player = document.querySelector("#player")
-player.innerHTML=localStorage.getItem("player")
+
+
+const timer = document.querySelector("#timer")
+
 
 const personagens = [
     "card-Boo",
@@ -23,6 +26,8 @@ const createElement = (tag,className)=>{
 
 }
 
+
+
 let pontos = 0
 
 let firstCard = ""
@@ -33,7 +38,8 @@ const checkEndgame = ()=>{
     
     const desabilit = [...document.querySelectorAll(".disabledCard")]
     if(desabilit.length == 20){
-        alert("Parabens você ganhou o jogo")
+        alert(`Parabens ${player.innerHTML} você ganhhou com o tempo de ${timer.innerHTML} Segundos `)
+        clearInterval(this.loop)
     }
 
 }
@@ -120,8 +126,20 @@ const loadGame = ()=>{
     })
 }
 
+const startTimer = ()=>{
+    this.loop = setInterval(()=>{
+       const currentTimer = Number(timer.innerHTML)
+       timer.innerHTML = currentTimer + 1
+    },1000)
+}
 
 
-loadGame()
+window.onload = ()=>{
+    player.innerHTML+=localStorage.getItem("player")
+    loadGame()
+    startTimer()
+}
+
+
 
 
