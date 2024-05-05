@@ -190,6 +190,7 @@ const reproduzirSom = (p)=>{
             notes[p-1].currentTime=0
             notes[p-1].play()
         }else{
+            notes[p-1].play()
             ini = null
             seg = null
         }
