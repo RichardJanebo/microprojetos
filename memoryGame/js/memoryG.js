@@ -7,6 +7,7 @@ const main = document.getElementById("main")
 const header = document.getElementById("header")
 
 
+
 const personagens = [
     "card-Boo",
     "card-Cell",
@@ -186,9 +187,6 @@ const loadGame = () => {
         Math.random() - 0.5
     )
 
-
-
-
     embaralharArrey.map((el) => {
         const card = createCard(el)
         grid.appendChild(card)
@@ -205,6 +203,8 @@ const startTimer = () => {
 
 window.onload = () => {
     player.innerHTML += localStorage.getItem("player")
+    
+    
     loadGame()
     startTimer()
 

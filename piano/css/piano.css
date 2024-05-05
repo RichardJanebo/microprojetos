@@ -1,0 +1,136 @@
+
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: #ebebeb;
+}
+
+.piano{
+    background-color: #121212;
+    width: 80vw;
+    height: 300px;
+    margin: 100px auto;
+    border-radius:10px ;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.piano .piano__keys .white:nth-child(5){
+    margin-right: 10px;
+}
+.piano__keys .white:nth-child(12){
+    margin-right: 10px;
+
+}
+.piano__keys .white:nth-child(17){
+    margin-right: 10px;
+}
+
+
+.controls{
+    color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    display: flex;
+    width: 100%;
+    border-radius: 9px 9px 0px 0px;
+    justify-content: space-between;
+    
+
+}
+label{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.switcher{
+    display: flex;
+    height: 30px;
+    width: 50px;
+    background-color: #555;
+    border-radius: 50px;
+    padding: 4px;
+    justify-content: start;
+    cursor: pointer;
+}
+
+.swicher__button{
+    height: 100%;
+    aspect-ratio: 1/1;
+    background-color:#ddd ;
+    border-radius: 25px;
+    
+    
+}
+.swicher__active{
+    justify-content: end;
+    background-color: #0b4939;
+
+}
+.checkbox__keys{
+    display: none;
+}
+
+.piano__keys{
+    display: flex;
+    padding: 0.8rem;
+    width: 100%;
+    height:200px ;
+    background-color: #121212;
+    justify-content: space-between;
+    border-radius: 5px;
+    color: #333;
+
+}
+.white{
+    background-color: #fff;
+    flex-grow: 1;
+    border-radius: 5px;
+    border-bottom: 8px solid #ddd;
+    color: rgba(0, 0, 0,0.3);
+    margin-left: -5px;
+    z-index: 1;
+    transition: 0.6s;
+    
+}
+.black{
+    width:20px ;
+    height: 60%;
+    background:linear-gradient(black, #333);  
+    border-radius:0 0 5px 5px ;  
+    border-bottom: 8px solid #222;
+    margin-left: -10px;
+    z-index: 2;
+    color: #ddd;
+}
+
+
+.key{
+   position: relative;
+   display: flex;
+   align-items: flex-end;
+   justify-content: center;
+   padding-bottom: 8px;
+   user-select: none;
+   cursor: pointer;
+}
+.key span{
+    font-weight: 600px;
+    position: absolute;
+
+}
+
+.disabled-key span{
+    opacity: 0;
+}
+.teclou{
+    border-bottom: 0;
+    background-color: rgb(207, 204, 204);
+    transition: 3s;
+
+}
