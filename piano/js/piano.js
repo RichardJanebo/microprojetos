@@ -57,6 +57,7 @@ const animation = (el)=>{
 
     window.addEventListener("keydown",(evt)=>{
         key(evt.code)
+      
     })
 
 
@@ -74,8 +75,8 @@ const encontrarOEle = (p)=>{
 
 const key = (e)=>{
     switch(e){
-        case "Tab":
-        encontrarOEle(84)
+        case "Backquote":
+        encontrarOEle(39)
         reproduzirSom(1)
         break
         case "Digit1":
@@ -175,11 +176,32 @@ const key = (e)=>{
     }
 }
 
-
+let ini = null
+let seg = null
 
 const reproduzirSom = (p)=>{
+    if (ini === null){
+        ini = p-1
+        notes[p-1].play()
+    }else{
+        seg = p-1
+      
+        if(ini == seg){
+            notes[p-1].currentTime=0
+            notes[p-1].play()
+        }else{
+            ini = null
+            seg = null
+        }
+    }
+    
+
    
-    notes[p-1].play()
+    
    
 }
+
+if (/Android/i.test(navigator.userAgent)) {
+  alert("Rotacione a tela")
+} 
 
