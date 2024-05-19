@@ -1,25 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search</title>
     <link rel="stylesheet" href="searchRickAndeMorty.css">
 </head>
+
 <body>
     <main>
         <div class="div_search">
-            <label><h1>Escolha um <span>personagem</span></h1>
-            <input type="text" id="input_search"></label>
+            <label>
+                <h1>Escolha um <span>personagem</span></h1>
+                <select name="" id="input_search" >
+                    <option value="">Escolha um personagem</option>
+                    
+                </select>
+                
+            </label>
         </div>
-        <div><img src="" alt="" id="img"></div>
+        <div id="stage" class="stage">
+            
+        </div>
         <div>
             <button id="search">Pesquisar</button>
         </div>
 
     </main>
-    
+
 
     <script src="searchRickAndeMorty.js"></script>
 </body>
+
 </html>

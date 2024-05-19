@@ -18,6 +18,8 @@ a{
     color: black;
     font-weight: bolder;
     margin-top: 100px;
+    padding: 2rem;
+    font-size: 2rem;
 }
 a:hover{
     background-color: #4a535b;
