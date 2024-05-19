@@ -38,7 +38,7 @@ const selectOpition = ()=>{
 const createData = (p) => {
     stage.innerHTML = ""
     let data = {
-        name: `Nome: ${p.name}</br>`,
+        name: `Nome: ${String(p.name)}</br>`,
         episodes: `Episódios: ${p.episode.length}</br>`,
         gender: `Genero: ${p.gender != "Male" ? "Feminino" : "Masculino"}</br>`,
         species: `Especie: ${p.species == "Human"?"Humano":p.species}</br>`,
