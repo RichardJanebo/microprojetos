@@ -46,6 +46,17 @@ button{
 button:hover{
     background-color: #11B0C8;
 }
+label{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+label h1{
+  
+    margin-bottom: 1rem;
+}
 
 
 @media screen and (min-width:1283px) {
@@ -69,10 +80,12 @@ button:hover{
         height: 90vh;
        
     }
-    button{
+    label{
         position: absolute;
         width: 20vw;
         bottom: 35%;
         left: 15%;
     }
+    
+   
 }

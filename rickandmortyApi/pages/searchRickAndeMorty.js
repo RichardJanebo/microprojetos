@@ -41,7 +41,7 @@ const createData = (p) => {
         name: `Nome: ${p.name}</br>`,
         episodes: `Episódios: ${p.episode.length}</br>`,
         gender: `Genero: ${p.gender != "Male" ? "Feminino" : "Masculino"}</br>`,
-        species: `Especie: ${p.species}</br>`,
+        species: `Especie: ${p.species == "Human"?"Humano":p.species}</br>`,
     }
     const div = document.createElement("div")
     const img = document.createElement("img")
